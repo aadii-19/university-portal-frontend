@@ -2,6 +2,8 @@ import axios from 'axios';
 
 const API_BASE_URL = `${import.meta.env.VITE_API_URL}/api`;
 
+console.log("🚀 BASE URL:", API_BASE_URL);
+
 const api = axios.create({
   baseURL: API_BASE_URL,
   headers: {
@@ -17,10 +19,10 @@ export const authAPI = {
 
 // UNIVERSITY API
 export const universityAPI = {
-  getDashboard: () => api.get('/dashboard'),
-  getCourses: () => api.get('/courses'),
   getEvents: () => api.get('/events'),
   getNews: () => api.get('/news'),
+  getDashboard: () => api.get('/dashboard'),
+  getCourses: () => api.get('/courses'),
 };
 
 export default api;
