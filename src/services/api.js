@@ -17,5 +17,12 @@ export const authAPI = {
     register: (data) => api.post('/auth/register', data),
 };
 
+export const universityAPI = {
+    getDashboard: () => api.get('/dashboard'),
+    getCourses: () => api.get('/courses'),
+    getEvents: () => api.get('/events'),
+    getNews: () => api.get('/news'),
+};
+
 // Export base api if needed elsewhere
 export default api;
