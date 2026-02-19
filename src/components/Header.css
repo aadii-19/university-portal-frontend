@@ -1,0 +1,67 @@
+.header {
+    background: var(--primary-navy);
+    border-bottom: 1px solid var(--border-color);
+    padding: 14px 0;
+    position: relative;
+    z-index: 100;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.header-brand:hover {
+    color: inherit;
+}
+
+.header-logo {
+    flex-shrink: 0;
+    animation: fadeIn 0.4s ease;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-title {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: -0.5px;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.header-motto {
+    font-size: 0.78rem;
+    color: var(--light-gray);
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 1.2rem;
+    }
+
+    .header-motto {
+        font-size: 0.7rem;
+    }
+
+    .header-logo svg {
+        width: 36px;
+        height: 36px;
+    }
+}

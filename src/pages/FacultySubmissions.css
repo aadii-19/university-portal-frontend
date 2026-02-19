@@ -1,0 +1,203 @@
+/* ═══════════════════════════════════════════════
+   Faculty Submissions Page — Styles
+   ═══════════════════════════════════════════════ */
+
+/* Filter Bar */
+.subs-filter {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.filter-label {
+    font-weight: 600;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.filter-select {
+    background: var(--bg-secondary, #111827);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    min-width: 250px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.filter-select:focus {
+    border-color: var(--accent);
+}
+
+.filter-count {
+    margin-left: auto;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Table Tweaks */
+.td-file {
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.85rem;
+}
+
+.td-date {
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.btn-sm {
+    padding: 5px 12px !important;
+    font-size: 0.8rem !important;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    color: var(--text-secondary);
+}
+
+/* Badge Variants */
+.badge-info {
+    background: rgba(59, 130, 246, 0.15);
+    color: #60a5fa;
+}
+
+.badge-success {
+    background: rgba(52, 211, 153, 0.15);
+    color: #34d399;
+}
+
+.badge-warning {
+    background: rgba(251, 191, 36, 0.15);
+    color: #fbbf24;
+}
+
+/* ─── AI Feedback Modal ──────────────────────── */
+
+.feedback-modal {
+    background: var(--bg-primary, #0a1628);
+    border: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+    border-radius: 16px;
+    max-width: 560px;
+    width: 95%;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* Score Grid */
+.score-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+    padding: 1.5rem;
+}
+
+.score-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 1rem 0.5rem;
+    border-radius: 12px;
+    background: var(--bg-secondary, #111827);
+}
+
+.score-card.overall {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.12) 0%, rgba(59, 130, 246, 0.04) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.15);
+}
+
+.score-value {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.score-card.overall .score-value {
+    color: var(--accent, #3b82f6);
+}
+
+.score-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-secondary);
+}
+
+/* Feedback Sections */
+.feedback-content {
+    padding-bottom: 1.5rem;
+}
+
+.feedback-section {
+    padding: 0 1.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.feedback-section h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.feedback-section p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    font-size: 0.9rem;
+}
+
+.feedback-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.feedback-section li {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    padding: 0.4rem 0;
+    padding-left: 1.2rem;
+    position: relative;
+    line-height: 1.5;
+}
+
+.feedback-section li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--accent, #3b82f6);
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .score-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .subs-filter {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-count {
+        margin-left: 0;
+    }
+
+    .filter-select {
+        min-width: unset;
+    }
+}
